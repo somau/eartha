@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Eartha Official — Minyak Kemiri Murni untuk Rambut, Alis &amp; Wajah</title>
-<meta name="description" content="Eartha Official: minyak kemiri murni untuk wajah, rambut, dan alis — Lavender Infused Candlenut Oil dan Nourishing Oil (kemiri + seledri), plus Salmon en Croute dari dapur Eartha. Proud local brand Indonesia.">
+<meta name="description" content="Minyak kemiri Eartha dibuat tanpa dibakar, jadi bening, bukan hitam. Lavender Infused untuk kulit kepala berketombe, Nourishing Oil (kemiri + seledri) untuk rambut rontok, plus Salmon en Croute untuk hampers. 4.9★ di Shopee.">
 <link rel="canonical" href="https://somau.github.io/eartha/">
 <meta name="theme-color" content="#1a130c">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Eartha Official">
 <meta property="og:locale" content="id_ID">
 <meta property="og:title" content="Eartha Official — Nature knows all">
-<meta property="og:description" content="Minyak kemiri murni untuk wajah, rambut, dan alis. Proud local brand Indonesia.">
+<meta property="og:description" content="Minyak kemiri bening yang nggak dibakar, untuk kulit kepala, alis, dan wajah. Bye rambut rontok, hello baby hair.">
 <meta property="og:url" content="https://somau.github.io/eartha/">
 <meta property="og:image" content="https://somau.github.io/eartha/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -130,6 +130,7 @@ h2 em,h1 em,h3 em{font-style:normal;color:var(--amber-deep)}
 .hero .l-copy{z-index:3;display:flex;align-items:flex-end}
 .hero .copy{padding-bottom:clamp(56px,11vh,120px);max-width:760px}
 .hero h1{font-size:clamp(52px,9vw,124px);line-height:.95;margin:0 0 22px;font-weight:400;letter-spacing:-.02em}
+.hero p.lede .hl{color:var(--on-dark)}
 .hero p.lede{font-size:clamp(17px,1.6vw,20px);color:var(--on-dark-muted);max-width:30em;margin:0 0 30px}
 .hero .local{margin:26px 0 0;font-size:13px;color:var(--on-dark-muted);letter-spacing:.04em}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
@@ -187,6 +188,7 @@ h2 em,h1 em,h3 em{font-style:normal;color:var(--amber-deep)}
 .kitchen .eyebrow{color:#d8b47a}
 .kitchen h3{font-size:clamp(32px,3.8vw,50px);line-height:1.04;margin:14px 0 18px}
 .kitchen p{color:#cfc5b2;margin:0 0 20px}
+.kitchen .crunch{display:block;color:var(--on-dark);font:400 21px/1.3 var(--serif);margin-bottom:8px}
 .kitchen dl{display:grid;grid-template-columns:auto 1fr;gap:10px 22px;margin:0 0 26px;font-size:15px}
 .kitchen dt{color:#d8b47a;font-weight:600}
 .kitchen dd{margin:0;color:var(--on-dark)}
@@ -212,21 +214,35 @@ h2 em,h1 em,h3 em{font-style:normal;color:var(--amber-deep)}
 @media (max-width:520px){.steps{grid-template-columns:1fr}}
 
 /* reviews */
-.reviews{padding:clamp(90px,12vw,160px) 0;background:var(--paper)}
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px);margin-top:clamp(40px,6vw,70px)}
-figure{margin:0;padding:34px 30px 28px;background:var(--cream);border-radius:8px;display:flex;flex-direction:column;gap:22px;position:relative}
-figure:nth-child(2){transform:translateY(36px)}
-figure svg.q{width:34px;color:var(--amber)}
-blockquote{margin:0;font:500 18px/1.6 var(--sans);color:var(--ink)}
-figcaption{margin-top:auto;font-size:13.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
-figcaption b{color:var(--ink);font-weight:600}
+.reviews{padding:clamp(90px,12vw,160px) 0 clamp(70px,9vw,120px);background:var(--paper);overflow:hidden}
 .rating-line{display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:15px}
 .rating-line .stars{color:var(--amber);letter-spacing:2px}
-@media (max-width:900px){.quotes{grid-template-columns:1fr}figure:nth-child(2){transform:none}}
+.marquees{display:grid;gap:22px;margin-top:clamp(36px,5vw,60px);-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.marquee{overflow:hidden}
+.track{display:flex;width:max-content;animation:drift-right var(--dur,90s) linear infinite}
+.m2 .track{--dur:110s}
+.marquees:hover .track,.marquees:focus-within .track{animation-play-state:paused}
+.set{display:flex;gap:22px;padding-right:22px}
+@keyframes drift-right{from{transform:translate3d(-50%,0,0)}to{transform:translate3d(0,0,0)}}
+.rcard{margin:0;width:min(380px,82vw);flex:none;padding:28px 26px 22px;background:var(--cream);border-radius:8px;display:flex;flex-direction:column;gap:18px}
+.m2 .rcard{background:var(--sand)}
+.rcard svg.q{width:28px;height:21px;color:var(--amber)}
+.rcard blockquote{margin:0;font:500 16.5px/1.6 var(--sans);color:var(--ink)}
+.rcard figcaption{margin-top:auto;font-size:13px;color:#5b4d40;border-top:1px solid var(--line);padding-top:14px}
+.rcard figcaption b{color:var(--ink);font-weight:600}
+.rev-note{margin:26px 0 0;font-size:13.5px;color:var(--muted)}
+@media (prefers-reduced-motion: reduce){
+  .marquees{-webkit-mask-image:none;mask-image:none}
+  .marquee{overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--gutter) 8px}
+  .track{animation:none}
+  .set[aria-hidden]{display:none}
+  .rcard{scroll-snap-align:start}
+}
 
 /* footer cta */
 .closing{background:var(--sand);padding:clamp(90px,12vw,150px) 0 40px;position:relative;overflow:hidden}
 .closing h2{max-width:11em}
+.close-sub{margin:18px 0 0;font-size:18px;color:#55473a;max-width:30em}
 .closing .ctas~*, .closing p{color:#55473a}
 .closing .ctas{display:flex;gap:12px;flex-wrap:wrap;margin:34px 0 0}
 .closing .btn-line{border:1px solid rgba(42,32,24,.35);color:var(--ink)}
@@ -315,7 +331,7 @@ figcaption b{color:var(--ink);font-weight:600}
       <div class="wrap">
         <div class="copy">
           <h1>Nature <em>knows</em> all.</h1>
-          <p class="lede">Minyak kemiri murni untuk wajah, rambut, dan alis. Bening, sederhana, dan dibuat dari bahan alami pilihan.</p>
+          <p class="lede">Minyak kemiri yang bening, bukan hitam, karena kemirinya nggak dibakar. Teteskan ke kulit kepala, alis, dan wajah. <span class="hl">Bye rambut rontok, hello baby hair.</span></p>
           <div class="ctas">
             <a class="btn btn-amber" href="#produk">Lihat produk <svg><use href="#arrow"/></svg></a>
             <a class="btn btn-ghost" href="https://shopee.co.id/earthaofficial" rel="noopener" target="_blank">Belanja di Shopee</a>
@@ -332,13 +348,13 @@ figcaption b{color:var(--ink);font-weight:600}
     <div class="wrap grid">
       <div>
         <div class="eyebrow rv">Tentang Eartha</div>
-        <h2 class="rv d1">Dari kemiri, <em>setetes</em> demi setetes.</h2>
-        <p class="rv d2">Kemiri sudah lama akrab di rumah-rumah Indonesia sebagai perawatan rambut. Eartha mengambil kebiasaan sederhana itu dan menuangkannya ke botol kaca amber: minyak kemiri yang bening, dengan bahan yang bisa kamu baca satu per satu.</p>
-        <p class="rv d2">Ada versi yang di-infused dengan lavender asli, bukan campuran essential oil, dan versi Nourishing dengan seledri. Setiap botol datang dengan spoolie untuk alis, dikemas rapi dengan bubble wrap.</p>
+        <h2 class="rv d1">Kemiri yang <em>nggak dibakar</em>.</h2>
+        <p class="rv d2">Banyak minyak kemiri berwarna hitam karena kemirinya dibakar dulu. Eartha Nourishing Oil dibuat tanpa proses pembakaran, jadi minyaknya bening. Kata pembeli kami, nggak ada bekas hitam yang nempel di bantal walau dipakai semalaman.</p>
+        <p class="rv d2">Varian lavendernya juga bukan tetesan essential oil. Bunga lavender asli direndam di minyak kemiri kurang lebih dua minggu, dan bulirnya kelihatan di dalam botol. Setiap botol 60 ml datang dengan spoolie untuk alis, tutup childproof, dan bubble wrap tebal.</p>
         <div class="facts rv d3">
           <div><b>4.9<span style="color:var(--amber)">★</span></b><small>dari 1,8rb penilaian toko di Shopee</small></div>
-          <div><b>60 ml</b><small>botol kaca amber + spoolie alis</small></div>
-          <div><b>3 bahan</b><small>kemiri, lavender, seledri</small></div>
+          <div><b>Bening</b><small>Nourishing Oil tanpa proses pembakaran</small></div>
+          <div><b>2 minggu</b><small>lavender asli direndam, bukan essential oil</small></div>
         </div>
       </div>
       <div class="stack" aria-label="Foto produk Eartha">
@@ -354,19 +370,19 @@ figcaption b{color:var(--ink);font-weight:600}
       <div class="sec-head">
         <div>
           <div class="eyebrow rv">Produk</div>
-          <h2 class="rv d1">Dua minyak, <em>satu</em> akar.</h2>
+          <h2 class="rv d1">Pilih sesuai <em>masalah rambutmu</em>.</h2>
         </div>
-        <p class="rv d2">Untuk kulit kepala, rambut, alis, wajah, sampai pijat badan. Tersedia di toko resmi Eartha di Shopee.</p>
+        <p class="rv d2">Dua-duanya 60 ml, bening, dan bisa dipakai dari kulit kepala sampai wajah. Bedanya ada di bahan kedua: lavender atau seledri.</p>
       </div>
 
       <div class="oils">
         <article class="card rv">
           <div class="img"><img src="img/lavender.webp" srcset="img/lavender-520.webp 520w, img/lavender.webp 900w" sizes="(max-width:860px) 92vw, 560px" width="900" height="900" alt="Eartha Lavender Infused Candlenut Oil 60 ml, label ungu" loading="lazy" decoding="async"></div>
           <div class="body">
-            <span class="tag">Infused ± 2 minggu</span>
+            <span class="tag">Untuk ketombe &amp; kulit kepala gatal</span>
             <h3>Lavender Infused Candlenut Oil</h3>
-            <p>Minyak kemiri dengan lavender yang di-infused selama kurang lebih dua minggu. Bukan dicampur essential oil, tapi lavender asli.</p>
-            <ul><li>Minyak kemiri</li><li>Lavender</li><li>60 ml</li><li>+ spoolie</li></ul>
+            <p>Bunga lavender asli direndam ±2 minggu dalam minyak kemiri. Sifat antiseptiknya bantu mencegah gatal akibat ketombe, sementara kemirinya merangsang tumbuhnya anak rambut.</p>
+            <ul><li>Ketombe</li><li>Anak rambut</li><li>Alis</li><li>Night face oil</li></ul>
             <div class="foot">
               <div class="price">Rp67.999<small>4.9 ★ · 183 terjual di Shopee</small></div>
               <a class="link-arrow" href="https://shopee.co.id/Eartha-Lavender-Infused-Candlenut-Oil-60ml-i.292424309.5459222546" rel="noopener" target="_blank">Beli <svg><use href="#arrow"/></svg></a>
@@ -376,10 +392,10 @@ figcaption b{color:var(--ink);font-weight:600}
         <article class="card rv d1">
           <div class="img"><img src="img/nourish.webp" srcset="img/nourish-520.webp 520w, img/nourish.webp 900w" sizes="(max-width:860px) 92vw, 560px" width="900" height="900" alt="Eartha Nourishing Oil 60 ml, label hijau, di atas batu putih" loading="lazy" decoding="async"></div>
           <div class="body">
-            <span class="tag">Tanpa pembakaran</span>
+            <span class="tag">Untuk rambut tipis &amp; rontok</span>
             <h3>Nourishing Oil — Kemiri + Seledri</h3>
-            <p>100% minyak kemiri dan seledri tanpa proses pembakaran, sehingga minyaknya bening dan tidak hitam. Bisa untuk semua jenis kulit kepala.</p>
-            <ul><li>Kemiri</li><li>Seledri</li><li>60 ml</li><li>Botol childproof</li></ul>
+            <p>Solusi buat kamu yang cari hair oil alami untuk melebatkan dan menumbuhkan rambut. 100% kemiri + seledri, tanpa dibakar, aman untuk semua jenis kulit kepala.</p>
+            <ul><li>Kurangi rontok</li><li>Menebalkan</li><li>Menghitamkan</li><li>Akar lebih kuat</li></ul>
             <div class="foot">
               <div class="price">Rp67.999<small>4.9 ★ · 76 terjual di Shopee</small></div>
               <a class="link-arrow" href="https://shopee.co.id/Eartha-Nourishing-Oil-Minyak-Kemiri-Seledri--i.292424309.22908807570" rel="noopener" target="_blank">Beli <svg><use href="#arrow"/></svg></a>
@@ -387,18 +403,19 @@ figcaption b{color:var(--ink);font-weight:600}
           </div>
         </article>
       </div>
-      <p class="bundle-note rv">Mau keduanya? Ada beberapa pilihan bundle, termasuk Pure Candlenut Oil, di <a href="https://shopee.co.id/earthaofficial" rel="noopener" target="_blank">toko Shopee Eartha</a>.</p>
+      <p class="bundle-note rv">Rontok <em>dan</em> berketombe? Ambil bundle Lavender + Nourishing, atau Pure Candlenut + Nourishing, di <a href="https://shopee.co.id/earthaofficial" rel="noopener" target="_blank">toko Shopee Eartha</a>.</p>
 
       <article class="kitchen rv" aria-labelledby="salmon-title">
         <div class="pic"><img src="img/salmon-wide.webp" data-depth="0.1" width="1200" height="972" alt="Salmon en Croute Eartha di atas piring, dengan kotak hampers krem bertuliskan Eartha" loading="lazy" decoding="async"></div>
         <div class="txt">
           <div class="eyebrow">Dari dapur Eartha · Hampers</div>
           <h3 id="salmon-title">Salmon en Croute, <em>Signature Series</em></h3>
-          <p>Fresh salmon fillet, bukan olahan, dibalut puff pastry homemade yang buttery dan flaky. Tanpa pengawet, dikemas rapi untuk hampers, kado, atau makan malam spesial.</p>
+          <p><b class="crunch">If you hear a crunch… that’s us.</b> Fillet salmon segar (bukan olahan) dibalut puff pastry homemade yang buttery dan flaky, dengan saus jamur khas Eartha. Tanpa pengawet, dibuat per batch dengan kuota terbatas. Bisa request hangtag ulang tahun untuk hampers.</p>
           <dl>
             <dt>Small</dt><dd>8 × 8 cm, porsi personal</dd>
             <dt>Full</dt><dd>22 × 8 cm, pas untuk 2–3 orang</dd>
-            <dt>Sajikan</dt><dd>Oven / air fryer 180°C, 5–7 menit</dd>
+            <dt>Sajikan</dt><dd>Oven / air fryer 180°C, 5–7 menit, pastry kembali flaky</dd>
+            <dt>Kirim</dt><dd>Tulis tanggal kirim di catatan; tambah thermal bag Rp5.000</dd>
           </dl>
           <div class="row">
             <div class="price">Rp130.000<small style="color:#cfc5b2">5.0 ★ di Shopee</small></div>
@@ -413,8 +430,8 @@ figcaption b{color:var(--ink);font-weight:600}
     <div class="glow" data-depth="-0.18" aria-hidden="true"></div>
     <div class="wrap">
       <div class="eyebrow rv">Cara pakai</div>
-      <h2 class="rv d1">Satu botol, <em>empat</em> ritual kecil.</h2>
-      <p class="sub rv d2">Hitungan tetes dari panduan Eartha untuk Lavender Infused Candlenut Oil.</p>
+      <h2 class="rv d1">Sedikit saja, <em>asal rutin</em>.</h2>
+      <p class="sub rv d2">Takaran dari Eartha untuk Lavender Infused Candlenut Oil. Satu botol bisa dipakai untuk empat hal ini.</p>
       <div class="steps">
         <div class="step rv"><span class="n">i</span><div class="drops" aria-hidden="true"><svg><use href="#drop"/></svg><svg><use href="#drop"/></svg><svg><use href="#drop"/></svg><svg><use href="#drop"/></svg></div><h3>Kulit kepala</h3><p>Teteskan merata, pijat sebentar, diamkan 20–30 menit atau semalaman, lalu keramas. Setelah keramas, cukup 3–4 tetes agar tidak lepek.</p></div>
         <div class="step rv d1"><span class="n">ii</span><div class="drops" aria-hidden="true"><svg><use href="#drop"/></svg><svg><use href="#drop"/></svg><svg><use href="#drop"/></svg></div><h3>Alis</h3><p>2–3 tetes pada spoolie, sapukan ke alis, diamkan 20–30 menit atau semalaman, lalu bilas.</p></div>
@@ -430,35 +447,34 @@ figcaption b{color:var(--ink);font-weight:600}
       <div class="sec-head">
         <div>
           <div class="eyebrow rv">Ulasan pembeli</div>
-          <h2 class="rv d1">Kata mereka, <em>apa adanya</em>.</h2>
+          <h2 class="rv d1">Repeat order, <em>berbotol-botol</em>.</h2>
         </div>
         <div class="rating-line rv d2"><span class="stars" aria-hidden="true">★★★★★</span><span>4.9 dari 1,8rb penilaian toko di Shopee</span></div>
       </div>
-      <div class="quotes">
-        <figure class="rv">
-          <svg class="q" aria-hidden="true"><use href="#quote"/></svg>
-          <blockquote>Finally, I'm so glad found candlenut oil yg ga ninggalin bekas hitam2.. Jadi bs di pakai kapanpun dan di bawa tidur jg ga khawatir nempel bekas di bantal.. Good job Eartha, I love it..</blockquote>
-          <figcaption><b>purpleunicorn99</b> · Lavender Infused Candlenut Oil · Shopee</figcaption>
-        </figure>
-        <figure class="rv d1">
-          <svg class="q" aria-hidden="true"><use href="#quote"/></svg>
-          <blockquote>Dalam pemakaian 1 minggu sudah terlihat anak" rambut mulai tumbuh, dan dalam pemakaian 2 minggu sudah lumayan bertumbuh rambut dan alis</blockquote>
-          <figcaption><b>rikahiu</b> · Lavender Infused Candlenut Oil · Shopee</figcaption>
-        </figure>
-        <figure class="rv d2">
-          <svg class="q" aria-hidden="true"><use href="#quote"/></svg>
-          <blockquote>Enaaaak dan salmonnya gak amis sama sekali.. untuk harga segitu oke bgt untuk porsi salmon dan bayamnya. Saus juga ga pelit. Yg paling penting penjual sat set dan ramah! :)</blockquote>
-          <figcaption><b>u2909</b> · Salmon en Croute, Full Size · Shopee</figcaption>
-        </figure>
-      </div>
     </div>
+    <div class="marquees" role="region" aria-label="Ulasan pembeli di Shopee, bergeser otomatis. Arahkan kursor atau fokus untuk menjeda.">
+        <div class="marquee m1">
+          <div class="track">
+            <div class="set"><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Finally, I'm so glad found candlenut oil yg ga ninggalin bekas hitam2.. Jadi bs di pakai kapanpun dan di bawa tidur jg ga khawatir nempel bekas di bantal.. Good job Eartha, I love it..</blockquote><figcaption><b>purpleunicorn99</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Udah ga tau beli keberapa kali, udh berbotol² hasilnya memuaskan, rambutku dulu tipis, skrg tebal, byk anak rambut dan mencegah rontok</blockquote><figcaption><b>heidy990</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Dalam pemakaian 1 minggu sudah terlihat anak" rambut mulai tumbuh, dan dalam pemakaian 2 minggu sudah lumayan bertumbuh rambut dan alis</blockquote><figcaption><b>rikahiu</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Bagus, bikin rambut lembut shiny dan bebas ketombe. Dipake setelah keramas ga bikin lepek. Iseng nyoba buat muka dikit eh jd alus bgt muka aku! Jadi night face oil  jg deh.</blockquote><figcaption><b>aquamarine15</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Pembelian kedua. Rontok jauh berkurang, semoga selalu cocok. Respon seller cepat dan ramah.</blockquote><figcaption><b>inge_chand</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Baru cobain, bawa tidur semalaman, ternyata bagus banget ya. Bikin rambut lembut banget dari akar ke ujung.</blockquote><figcaption><b>d*****a</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Enaaaak dan salmonnya gak amis sama sekali.. untuk harga segitu oke bgt untuk porsi salmon dan bayamnya. Saus juga ga pelit. Yg paling penting penjual sat set dan ramah! :)</blockquote><figcaption><b>u2909</b> · Salmon en Croute, Full Size</figcaption></figure></div>
+            <div class="set" aria-hidden="true"><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Finally, I'm so glad found candlenut oil yg ga ninggalin bekas hitam2.. Jadi bs di pakai kapanpun dan di bawa tidur jg ga khawatir nempel bekas di bantal.. Good job Eartha, I love it..</blockquote><figcaption><b>purpleunicorn99</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Udah ga tau beli keberapa kali, udh berbotol² hasilnya memuaskan, rambutku dulu tipis, skrg tebal, byk anak rambut dan mencegah rontok</blockquote><figcaption><b>heidy990</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Dalam pemakaian 1 minggu sudah terlihat anak" rambut mulai tumbuh, dan dalam pemakaian 2 minggu sudah lumayan bertumbuh rambut dan alis</blockquote><figcaption><b>rikahiu</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Bagus, bikin rambut lembut shiny dan bebas ketombe. Dipake setelah keramas ga bikin lepek. Iseng nyoba buat muka dikit eh jd alus bgt muka aku! Jadi night face oil  jg deh.</blockquote><figcaption><b>aquamarine15</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Pembelian kedua. Rontok jauh berkurang, semoga selalu cocok. Respon seller cepat dan ramah.</blockquote><figcaption><b>inge_chand</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Baru cobain, bawa tidur semalaman, ternyata bagus banget ya. Bikin rambut lembut banget dari akar ke ujung.</blockquote><figcaption><b>d*****a</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Enaaaak dan salmonnya gak amis sama sekali.. untuk harga segitu oke bgt untuk porsi salmon dan bayamnya. Saus juga ga pelit. Yg paling penting penjual sat set dan ramah! :)</blockquote><figcaption><b>u2909</b> · Salmon en Croute, Full Size</figcaption></figure></div>
+          </div>
+        </div>
+        <div class="marquee m2">
+          <div class="track">
+            <div class="set"><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Dua kali pesen dan sebagus itu 👍👍 rambut sudah tidak rontok, ketombe hilang..</blockquote><figcaption><b>t*****g</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Ini nih bikin repurchase. Soalnya bisa mengurangi rontok, rambut lebih berkilau, dan sehat 💖</blockquote><figcaption><b>hana.45</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Tutup botolnya juga diseal dan pake bubblewrap di dlm kardus, jadi aman bgt. Pertahankan ya packingnya. Baunya jelas kemiri. Di dalem botolnya bener2 ada bunga lavendernya.</blockquote><figcaption><b>m*****a</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Kirim buat hampers ke temen, packingnya bagus dan pelayanan sellernya gercep. Pastry dan salmonnya enak dan fresh, thanks ya</blockquote><figcaption><b>e*****s</b> · Salmon en Croute, Full Size</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>baru nyoba 2x yg pure candlenut buat rambut dipake 20-30 menit sbelum keramas, dan lumayan ngurangin ketombe, dan jd lebih lembut stelah keramas...baunya ga ada yg ganggu</blockquote><figcaption><b>eldheiacraft</b> · Pure Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>sumpah enak banget asli ga boong kata yg nerima</blockquote><figcaption><b>k*****3</b> · Salmon en Croute, Small Size</figcaption></figure></div>
+            <div class="set" aria-hidden="true"><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Dua kali pesen dan sebagus itu 👍👍 rambut sudah tidak rontok, ketombe hilang..</blockquote><figcaption><b>t*****g</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Ini nih bikin repurchase. Soalnya bisa mengurangi rontok, rambut lebih berkilau, dan sehat 💖</blockquote><figcaption><b>hana.45</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Tutup botolnya juga diseal dan pake bubblewrap di dlm kardus, jadi aman bgt. Pertahankan ya packingnya. Baunya jelas kemiri. Di dalem botolnya bener2 ada bunga lavendernya.</blockquote><figcaption><b>m*****a</b> · Lavender Infused Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>Kirim buat hampers ke temen, packingnya bagus dan pelayanan sellernya gercep. Pastry dan salmonnya enak dan fresh, thanks ya</blockquote><figcaption><b>e*****s</b> · Salmon en Croute, Full Size</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>baru nyoba 2x yg pure candlenut buat rambut dipake 20-30 menit sbelum keramas, dan lumayan ngurangin ketombe, dan jd lebih lembut stelah keramas...baunya ga ada yg ganggu</blockquote><figcaption><b>eldheiacraft</b> · Pure Candlenut Oil</figcaption></figure><figure class="rcard"><svg class="q" aria-hidden="true"><use href="#quote"/></svg><blockquote>sumpah enak banget asli ga boong kata yg nerima</blockquote><figcaption><b>k*****3</b> · Salmon en Croute, Small Size</figcaption></figure></div>
+          </div>
+        </div>
+    </div>
+    <div class="wrap"><p class="rev-note">Ulasan asli dari pembeli di Shopee, dikutip apa adanya.</p></div>
   </section>
 
   <section class="closing" id="belanja">
     <svg class="sprig" data-depth="-0.15" viewBox="0 0 400 400" aria-hidden="true"><use href="#branch"/></svg>
     <div class="wrap">
       <div class="eyebrow rv">Belanja &amp; ikuti</div>
-      <h2 class="rv d1">Setetes kemiri, <em>siap dikirim</em>.</h2>
+      <h2 class="rv d1">Mulai dari <em>satu botol</em>.</h2>
+      <p class="close-sub rv d1">Dikirim Senin–Sabtu, dibungkus bubble wrap tebal, plus spoolie untuk alis.</p>
       <div class="ctas rv d2">
         <a class="btn btn-ink" href="https://shopee.co.id/earthaofficial" rel="noopener" target="_blank"><svg><use href="#bag"/></svg>Toko Shopee: earthaofficial</a>
         <a class="btn btn-line" href="https://www.instagram.com/earthaofficial.id/" rel="noopener" target="_blank">Instagram @earthaofficial.id</a>
