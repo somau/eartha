@@ -408,6 +408,16 @@ h2 em,h1 em,h3 em{font-style:normal;color:var(--amber-deep)}
 .hero .l-leaves svg.left{left:-10%;right:auto;bottom:auto;top:-18%;width:min(36vw,420px);transform:rotate(160deg);opacity:.7}
 .hero .l-copy{z-index:3;display:flex;align-items:flex-end}
 .hero .copy{padding-bottom:clamp(56px,11vh,120px);max-width:760px}
+.hero .kicker{font:600 12.5px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#e0a95a;margin:0 0 16px}
+details.more{margin:6px 0 18px}
+details.more>summary{cursor:pointer;list-style:none;display:inline-flex;gap:10px;align-items:center;font:600 14px/1.2 var(--sans);color:var(--amber-deep);padding:8px 0}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::after{content:"+";font:300 22px/1 var(--sans);transition:transform .3s var(--ease)}
+details.more[open]>summary::after{transform:rotate(45deg)}
+details.more>p{margin:6px 0 0}
+.kitchen details.more>summary{color:#d8b47a}
+#hampers{padding-top:0}
+#hampers .kitchen{margin-top:0}
 .hero h1{font-size:clamp(46px,7.4vw,108px);line-height:.98;margin:0 0 22px;font-weight:400;letter-spacing:-.02em}
 .hero p.lede .hl{color:var(--on-dark)}
 .hero p.lede{font-size:clamp(17px,1.6vw,20px);color:var(--on-dark-muted);max-width:30em;margin:0 0 30px}
@@ -567,6 +577,21 @@ h2 em,h1 em,h3 em{font-style:normal;color:var(--amber-deep)}
   .scroll-cue{display:none}
   .card .img img,.btn,.link-arrow svg{transition:none}
 }
+/* bio-link scanning: tighter rhythm and swipe rows on phones */
+@media (max-width:640px){
+  .about,.products,.ritual,.reviews,.faq{padding-top:64px;padding-bottom:64px}
+  .closing{padding-top:64px}
+  #hampers{padding-top:0}
+  .stack{max-width:300px}
+  .sec-head{margin-bottom:28px}
+  .oils{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 calc(-1 * var(--gutter));padding:0 var(--gutter) 8px;scrollbar-width:none}
+  .oils::-webkit-scrollbar{display:none}
+  .oils .card{flex:0 0 84%;scroll-snap-align:center}
+  .card .img{aspect-ratio:4/3}
+  .kitchen .pic{min-height:220px}
+  .steps{grid-template-columns:1fr 1fr !important;gap:32px 18px}
+  .step h3{font-size:22px}
+}
 </style>
 </head>
 <body>
@@ -638,13 +663,14 @@ h2 em,h1 em,h3 em{font-style:normal;color:var(--amber-deep)}
     <div class="layer l-copy" data-depth="0.14">
       <div class="wrap">
         <div class="copy">
+          <p class="kicker">Eartha · minyak kemiri bening</p>
           <h1>Bye rambut rontok, <em>hello baby hair.</em></h1>
-          <p class="lede">Minyak kemiri yang nggak dibakar. Bening, jadi nggak ninggalin bekas hitam di bantal. <span class="hl">Teteskan, pijat, tinggal tidur.</span></p>
+          <p class="lede">Kemiri tanpa dibakar: bening, nggak ninggalin noda hitam di bantal. <span class="hl">Teteskan, pijat, tidur.</span></p>
           <div class="ctas">
             <a class="btn btn-amber" href="#produk">Pilih minyakmu <svg><use href="#arrow"/></svg></a>
             <a class="btn btn-ghost" href="https://shopee.co.id/earthaofficial" rel="noopener" target="_blank" data-cta="hero-shopee-store">Belanja di Shopee</a>
           </div>
-          <p class="local"><span class="stars">★★★★★</span> 4.9 dari 1,8rb penilaian di Shopee · Proud #LocalBrand Indonesia</p>
+          <p class="local"><span class="stars">★★★★★</span> 4.9 dari 1,8rb penilaian di Shopee · brand lokal Indonesia</p>
         </div>
       </div>
     </div>
@@ -655,11 +681,13 @@ h2 em,h1 em,h3 em{font-style:normal;color:var(--amber-deep)}
   <section class="about" id="tentang">
     <div class="wrap grid">
       <div>
-        <div class="eyebrow rv">Kenapa bening?</div>
+        <div class="eyebrow rv">Nature knows all</div>
         <h2 class="rv d1">Minyak kemiri <em>nggak harus hitam</em>.</h2>
-        <p class="rv d2">Banyak orang mengira minyak kemiri memang hitam. Padahal hitamnya datang dari kemiri yang dibakar dulu. Hasilnya bisa ninggalin bekas di rambut, alis, dan sarung bantal.</p>
-        <p class="rv d2">Eartha Nourishing Oil dibuat tanpa dibakar. Minyaknya bening. Kamu bisa pakai semalaman tanpa mikirin bantal.</p>
-        <p class="rv d2">Varian lavendernya pun bukan tetesan essential oil. Bunga lavender asli kami rendam di minyak kemiri kira-kira dua minggu. Bulirnya kelihatan di dalam botol.</p>
+        <p class="rv d2">Hitamnya minyak kemiri datang dari kemiri yang dibakar. Eartha nggak dibakar, jadi bening dan aman dibawa tidur.</p>
+        <details class="more rv d2"><summary>Kenapa ini penting?</summary>
+          <p>Minyak kemiri yang dibakar bisa ninggalin bekas di rambut, alis, dan sarung bantal. Eartha Nourishing Oil dibuat tanpa dibakar, jadi kamu bisa pakai semalaman tanpa mikirin bantal.</p>
+          <p>Varian lavendernya juga bukan tetesan essential oil. Bunga lavender asli direndam di minyak kemiri kira-kira dua minggu. Bulirnya kelihatan di dalam botol.</p>
+        </details>
         <p class="pull rv d2">“…ga ninggalin bekas hitam2.. di bawa tidur jg ga khawatir nempel bekas di bantal..”<span>purpleunicorn99, pembeli di Shopee</span></p>
         <div class="facts rv d3">
           <div><b>4.9<span style="color:var(--amber)">★</span></b><small>dari 1,8rb penilaian toko di Shopee</small></div>
@@ -682,7 +710,7 @@ h2 em,h1 em,h3 em{font-style:normal;color:var(--amber-deep)}
           <div class="eyebrow rv">Pilih minyakmu</div>
           <h2 class="rv d1">Rontok, <em>atau ketombe?</em></h2>
         </div>
-        <p class="rv d2">Dua masalah, dua botol. Pilih yang paling mengganggu kamu sekarang. Dua-duanya 60 ml, bening, dan bisa juga dipakai untuk alis dan wajah.</p>
+        <p class="rv d2">Dua masalah, dua botol. Sama-sama 60 ml, bening, bisa untuk alis dan wajah.</p>
       </div>
 
       <div class="oils">
@@ -691,7 +719,8 @@ h2 em,h1 em,h3 em{font-style:normal;color:var(--amber-deep)}
           <div class="body">
             <span class="tag">Kalau kulit kepala gatal &amp; berketombe</span>
             <h3>Lavender Infused Candlenut Oil</h3>
-            <p>Bunga lavender asli, direndam dua minggu dalam minyak kemiri. Sifat antiseptiknya bantu mencegah gatal akibat ketombe. Kemirinya merawat akar rambut.</p>
+            <p>Lavender asli direndam dua minggu. Untuk gatal dan ketombe.</p>
+            <details class="more"><summary>Detail</summary><p>Bunga lavender asli, direndam dua minggu dalam minyak kemiri. Sifat antiseptiknya bantu mencegah gatal akibat ketombe. Kemirinya merawat akar rambut.</p></details>
             <p class="proof">“…bikin rambut lembut shiny dan bebas ketombe. Dipake setelah keramas ga bikin lepek.” <span>aquamarine15</span></p>
             <ul><li>Ketombe</li><li>Anak rambut</li><li>Alis</li><li>Night face oil</li></ul>
             <div class="foot">
@@ -705,7 +734,8 @@ h2 em,h1 em,h3 em{font-style:normal;color:var(--amber-deep)}
           <div class="body">
             <span class="tag">Kalau rambut tipis &amp; rontok</span>
             <h3>Nourishing Oil — Kemiri + Seledri</h3>
-            <p>Rambut di sisir makin banyak? Nourishing Oil memadukan kemiri dan seledri, tanpa dibakar, untuk mengurangi kerontokan, melebatkan, dan menghitamkan rambut. Bisa untuk semua jenis kulit kepala.</p>
+            <p>Kemiri + seledri, tanpa dibakar. Untuk rambut rontok dan tipis.</p>
+            <details class="more"><summary>Detail</summary><p>Rambut di sisir makin banyak? Nourishing Oil memadukan kemiri dan seledri, tanpa dibakar, untuk mengurangi kerontokan, melebatkan, dan menghitamkan rambut. Bisa untuk semua jenis kulit kepala.</p></details>
             <p class="proof">Dari Eartha: “dijamin anak rambut kamu akan berterimakasih 😂” <span>caption Instagram @earthaofficial.id</span></p>
             <ul><li>Kurangi rontok</li><li>Menebalkan</li><li>Menghitamkan</li><li>Akar lebih kuat</li></ul>
             <div class="foot">
@@ -717,25 +747,6 @@ h2 em,h1 em,h3 em{font-style:normal;color:var(--amber-deep)}
       </div>
       <p class="bundle-note rv">Rontok <em>dan</em> berketombe? Ambil bundle Lavender + Nourishing, Rp130.999, di <a href="https://shopee.co.id/Eartha-Bundle-Lavender-Infused-Candlenut-Oil-Nourishing-Oil-i.292424309.23321924327" rel="noopener" target="_blank" data-cta="produk-shopee-bundle">Shopee</a>.</p>
 
-      <article class="kitchen rv" aria-labelledby="salmon-title">
-        <div class="pic"><img src="img/salmon-wide.webp" data-depth="0.1" width="1200" height="972" alt="Salmon en Croute Eartha di atas piring, dengan kotak hampers krem bertuliskan Eartha" loading="lazy" decoding="async"></div>
-        <div class="txt">
-          <div class="eyebrow">Untuk yang mau kirim hampers</div>
-          <h3 id="salmon-title">Hampers yang bikin penerima <em>langsung chat balik</em>.</h3>
-          <p><b class="crunch">“sumpah enak banget asli ga boong kata yg nerima”</b><span class="who">pembeli Salmon en Croute di Shopee</span></p>
-          <p>Salmon en Croute: fillet salmon segar, bukan olahan, dibalut puff pastry homemade yang buttery dan flaky, dengan saus jamur khas Eartha. Tanpa pengawet. Bisa request hangtag ulang tahun.</p>
-          <dl>
-            <dt>Small</dt><dd>8 × 8 cm, porsi personal</dd>
-            <dt>Full</dt><dd>22 × 8 cm, pas untuk 2–3 orang</dd>
-            <dt>Sajikan</dt><dd>Oven / air fryer 180°C, 5–7 menit, pastry kembali flaky</dd>
-            <dt>Kuota</dt><dd>Terbatas tiap batch. Tulis tanggal kirim di catatan pesanan.</dd>
-          </dl>
-          <div class="row">
-            <div class="price">Rp130.000<small style="color:#cfc5b2">5.0 ★ di Shopee</small></div>
-            <a class="btn btn-amber" href="https://shopee.co.id/Salmon-en-Croute-Signature-Series-i.292424309.57301483059" rel="noopener" target="_blank" data-cta="produk-shopee-salmon">Amankan slot batch <svg><use href="#arrow"/></svg></a>
-          </div>
-        </div>
-      </article>
     </div>
   </section>
 
@@ -744,7 +755,7 @@ h2 em,h1 em,h3 em{font-style:normal;color:var(--amber-deep)}
     <div class="wrap">
       <div class="eyebrow rv">Cara pakai</div>
       <h2 class="rv d1">Teteskan. Pijat. <em>Tinggal tidur.</em></h2>
-      <p class="sub rv d2">Nggak perlu ritual ribet. Ini takaran dari Eartha untuk Lavender Infused Candlenut Oil, dan satu botol bisa dipakai untuk empat hal.</p>
+      <p class="sub rv d2">Satu botol Lavender, empat kegunaan. Takaran dari Eartha.</p>
       <div class="steps">
         <div class="step rv"><span class="n">i</span><div class="drops" aria-hidden="true"><svg><use href="#drop"/></svg><svg><use href="#drop"/></svg><svg><use href="#drop"/></svg><svg><use href="#drop"/></svg></div><h3>Kulit kepala</h3><p>Teteskan merata, pijat sebentar, diamkan 20–30 menit atau semalaman, lalu keramas. Setelah keramas, cukup 3–4 tetes agar tidak lepek.</p></div>
         <div class="step rv d1"><span class="n">ii</span><div class="drops" aria-hidden="true"><svg><use href="#drop"/></svg><svg><use href="#drop"/></svg><svg><use href="#drop"/></svg></div><h3>Alis</h3><p>2–3 tetes pada spoolie, sapukan ke alis, diamkan 20–30 menit atau semalaman, lalu bilas.</p></div>
@@ -783,6 +794,33 @@ h2 em,h1 em,h3 em{font-style:normal;color:var(--amber-deep)}
     <div class="wrap"><p class="rev-note">Ulasan asli dari pembeli di Shopee, dikutip apa adanya.</p></div>
   </section>
 
+  <section class="products" id="hampers" aria-label="Hampers Salmon en Croute">
+    <div class="wrap">
+      <article class="kitchen rv" aria-labelledby="salmon-title">
+        <div class="pic"><img src="img/salmon-wide.webp" data-depth="0.1" width="1200" height="972" alt="Salmon en Croute Eartha di atas piring, dengan kotak hampers krem bertuliskan Eartha" loading="lazy" decoding="async"></div>
+        <div class="txt">
+          <div class="eyebrow">Untuk yang mau kirim hampers</div>
+          <h3 id="salmon-title">Hampers yang bikin penerima <em>langsung chat balik</em>.</h3>
+          <p><b class="crunch">“sumpah enak banget asli ga boong kata yg nerima”</b><span class="who">pembeli Salmon en Croute di Shopee</span></p>
+          <p>Fillet salmon segar dalam puff pastry homemade. Tanpa pengawet.</p>
+          <details class="more"><summary>Ukuran, cara saji, kuota</summary>
+          <p>Salmon en Croute: fillet salmon segar, bukan olahan, dibalut puff pastry homemade yang buttery dan flaky, dengan saus jamur khas Eartha. Tanpa pengawet. Bisa request hangtag ulang tahun.</p>
+          <dl>
+            <dt>Small</dt><dd>8 × 8 cm, porsi personal</dd>
+            <dt>Full</dt><dd>22 × 8 cm, pas untuk 2–3 orang</dd>
+            <dt>Sajikan</dt><dd>Oven / air fryer 180°C, 5–7 menit, pastry kembali flaky</dd>
+            <dt>Kuota</dt><dd>Terbatas tiap batch. Tulis tanggal kirim di catatan pesanan.</dd>
+          </dl>
+          </details>
+          <div class="row">
+            <div class="price">Rp130.000<small style="color:#cfc5b2">5.0 ★ di Shopee</small></div>
+            <a class="btn btn-amber" href="https://shopee.co.id/Salmon-en-Croute-Signature-Series-i.292424309.57301483059" rel="noopener" target="_blank" data-cta="hampers-shopee-salmon">Amankan slot batch <svg><use href="#arrow"/></svg></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <section class="faq" id="faq" aria-labelledby="faq-title">
     <div class="wrap">
       <div class="faq-grid">
@@ -802,7 +840,7 @@ h2 em,h1 em,h3 em{font-style:normal;color:var(--amber-deep)}
           <p class="checked rv d2">Fakta dicek pada <time datetime="2026-11-15">15 November 2026</time> dari toko Shopee earthaofficial, deskripsi produk, dan Instagram @earthaofficial.id.</p>
         </div>
         <div class="qa">
-          <details class="rv" open><summary><h3>Apa itu Eartha Official?</h3></summary><p>Eartha Official adalah brand lokal Indonesia yang membuat minyak kemiri untuk kulit kepala, rambut, alis, dan wajah, yaitu Lavender Infused Candlenut Oil dan Nourishing Oil (kemiri + seledri), masing-masing 60 ml. Eartha juga menjual Salmon en Croute untuk hampers. Toko resminya ada di Shopee dengan nama earthaofficial.</p></details>
+          <details class="rv"><summary><h3>Apa itu Eartha Official?</h3></summary><p>Eartha Official adalah brand lokal Indonesia yang membuat minyak kemiri untuk kulit kepala, rambut, alis, dan wajah, yaitu Lavender Infused Candlenut Oil dan Nourishing Oil (kemiri + seledri), masing-masing 60 ml. Eartha juga menjual Salmon en Croute untuk hampers. Toko resminya ada di Shopee dengan nama earthaofficial.</p></details>
           <details class="rv"><summary><h3>Apa bedanya Lavender Infused Candlenut Oil dan Nourishing Oil?</h3></summary><p>Lavender Infused Candlenut Oil adalah minyak kemiri dengan bunga lavender asli yang di-infused kurang lebih 2 minggu, bukan dicampur essential oil; menurut Eartha cocok untuk kulit kepala gatal dan berketombe. Nourishing Oil adalah 100% kemiri dan seledri tanpa proses pembakaran; menurut Eartha untuk mengurangi kerontokan, menebalkan, dan menghitamkan rambut. Keduanya Rp67.999 per botol 60 ml di Shopee.</p></details>
           <details class="rv"><summary><h3>Kenapa minyak kemiri Eartha bening, tidak hitam?</h3></summary><p>Menurut deskripsi produk, Eartha Nourishing Oil dibuat tanpa proses pembakaran, sehingga minyak yang dihasilkan bening dan tidak hitam. Pembeli di Shopee juga menulis bahwa minyaknya tidak meninggalkan bekas hitam di bantal.</p></details>
           <details class="rv"><summary><h3>Berapa harga produk Eartha?</h3></summary><p>Di Shopee: Lavender Infused Candlenut Oil 60 ml Rp67.999, Nourishing Oil 60 ml Rp67.999, bundle Lavender + Nourishing Rp130.999, bundle Pure Candlenut + Nourishing Rp125.999, bundle Pure Candlenut + Lavender Rp125.999, Eartha Bundle 3 Rp192.999, dan Salmon en Croute Signature Series Rp130.000.</p></details>
